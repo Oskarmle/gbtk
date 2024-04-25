@@ -15,7 +15,8 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React this is a test to see if git is setup correctly
+          Learn React this is a test to see if git is setup correctly is it
+          working now?
         </a>
       </header>
     </div>
