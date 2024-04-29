@@ -10,19 +10,19 @@ export default function Header() {
             <img src="../../assets/gbtk_dark_logo.png" alt="" className='logo'/>
         </a>
         <a className='header_link'>
-            <h2>Information</h2>
+            <h3>Information</h3>
         </a>
         <a className='header_link'>
-            <h2>Kontakt</h2>
+            <h3>Kontakt</h3>
         </a>
         <a className='header_link'>
-            <h2>Kalender</h2>
+            <h3>Kalender</h3>
         </a>
         <a className='header_link'>
-            <h2>Bestyrelse</h2>
+            <h3>Bestyrelse</h3>
         </a>
         <a className='header_link'>
-            <h2>Butik</h2>
+            <h3>Butik</h3>
         </a>
     </div>
     </>
