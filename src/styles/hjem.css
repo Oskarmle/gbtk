@@ -2,6 +2,20 @@
   width: 1440px;
 }
 
+.fp_section2{
+  width: 1440px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+}
+
+.fp_section3{
+  width: 1440px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+}
+
 /*************************** HERO *****************************/
 .overlay {
   background: linear-gradient(90deg, #000000, rgba(255, 255, 255, 0));
@@ -79,12 +93,10 @@ button {
     height: 80px;
 }
 
-/***************************** SPONSOR *******************************/
-.facebook_feed{
-    margin-left: 40px;
-    margin-top: 40px;
-    
+/***************************** Important news *******************************/
+/* 860px */
+.news_container{
+  width: 900px;
+  height: 620px;
+  background: var(--green_gradient);
 }
-
-
-
