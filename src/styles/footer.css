@@ -2,7 +2,7 @@
     width: 1440px;
     height: 150px;
     background: var(--green_gradient);
-    margin-top: 40px;
+    margin-top: 80px;
     display: flex;
     /* justify-content: space-around; */
     /* align-items: center; */
@@ -44,4 +44,8 @@ a{
 
 .footer_logo{
     height: 80px;
+}
+
+.footer_section4{
+    padding-left: 60px;
 }

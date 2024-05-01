@@ -1,5 +1,29 @@
+.text_section3{
+    transform: translateY(-625px);
+    padding-left: 20px;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    height: 621px;
+    background: rgba(0, 0, 0, 0.500);
+}
+
 .fp_section3_container{
     width: 466px;
     height: 621px;
-    background: var(--green);
+}
+
+.section3_header{
+    font-size: 65px;   
+}
+
+.section3_text{
+    width: 220px;
+    font-size: 18px;
+}
+
+.section3_CTA{
+    margin-top: 305px;
+    font-size: 28px;
+    font-weight: bold;
 }

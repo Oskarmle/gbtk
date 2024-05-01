@@ -27,7 +27,7 @@ export default function Footer() {
         </div>
         <div className="vertical_line_white"></div>
 
-        <a className="footer_logo_container footer_part4">
+        <a className="footer_logo_container footer_section4">
           <img
             src="../../assets/gbtk_dark_logo.png"
             alt=""

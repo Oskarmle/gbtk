@@ -5,9 +5,12 @@ import Hero from "../components/hero";
 import Sponsor from "../components/sponsor";
 import Footer from "../components/footer";
 import Important_news from "../components/important_news";
-import Section3 from "../components/section3";
+import Section3_ungdom from "../components/section3/section3_ungdom";
+import Section3_60plus from "../components/section3/section3_60plus";
+import Section3_senior from "../components/section3/section3_senior";
+import Contact from "../components/contact";
 
-export default function Hjem() {
+export default function Hjem({}) {
   return (
     <>
       <div className="container">
@@ -28,11 +31,12 @@ export default function Hjem() {
           <Important_news></Important_news>
         </div>
         <div className="fp_section3">
-          <Section3></Section3>
-          <Section3></Section3>
-          <Section3></Section3>
+          <Section3_ungdom></Section3_ungdom>
+          <Section3_60plus></Section3_60plus>
+          <Section3_senior></Section3_senior>
         </div>
       </div>
+      <Contact></Contact>
       <Footer></Footer>
     </>
   );
