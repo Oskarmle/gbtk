@@ -1,0 +1,69 @@
+.b_intro{
+    margin-top: 40px;
+}
+
+.b_members{
+    width: 1440px;
+    display: flex;
+    height: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.b_member-card{
+    /* border-radius: 8px; */
+    margin-bottom: 50px;
+}
+
+.b_member-card img{
+    margin-bottom: -5px;
+}
+
+.b_member-info{
+    width: 300px;
+    height: 190px;
+    background: var(--grey_gradient);
+    padding-left: 15px;
+    padding-top: 10px;
+}
+
+.b_title{
+    color: rgb(168, 168, 168);
+    margin-bottom: -5px;
+}
+
+.b_name{
+    color: var(--white);
+    margin-bottom: 50px;
+}
+
+.b_contact{
+    color: var(--white);
+    display: flex;
+    margin-top: 20px;
+}
+
+.b_contact img{
+    padding-right: 10px;
+    height: 20px;
+}
+
+.b_fileshow{
+    width: 1440px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+    margin-bottom: 140px;
+}
+
+.b_files{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.b_files h2{
+    padding-top: 15px;
+}
+
