@@ -17,7 +17,7 @@ root.render(
     <Header>
       <App />
     </Header>
-    <BrowserRouter>
+    {/* <BrowserRouter>
       <Routes>
         <Route>
           <Route index element={<Hjem />} />
@@ -27,7 +27,7 @@ root.render(
           <Route path="bestyrelse" element={<Bestyrelse />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </BrowserRouter> */}
   </React.StrictMode>
 );
 
