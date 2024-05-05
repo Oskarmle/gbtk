@@ -1,0 +1,9 @@
+.shop_intro {
+  margin-top: 80px;
+}
+
+.shop_intro p {
+  color: var(--grey);
+  font-size: 25px;
+  width: 100px;
+}
