@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/accordion.css";
+import "../styles/accordion.css";
 import { useState } from "react";
 
 export default function Accordion() {
@@ -20,7 +20,7 @@ export default function Accordion() {
       answer: "Accordion components are user interface elements used for organizing and presenting content in a collapsible manner. They typically consist of a header, content, and an expand/collapse action.",
     },
     {
-      question:"Pointstævner?",
+      question:"Pointstævner",
       answer: "They are commonly employed in various contexts, including FAQs, product descriptions, navigation menus, settings panels, and data tables, to save screen space and provide a structured and user-friendly interface for presenting information or options.",
     },
     {
