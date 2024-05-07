@@ -4,6 +4,7 @@ import Information_start from "../components/information_start";
 import Footer from "../components/footer";
 import Accordion from "../components/Accordion";
 import Information_path from "../components/information_path";
+import Udmeldelse from "../components/udmeldelse";
 
 export default function Information() {
   return (
@@ -37,6 +38,7 @@ export default function Information() {
           <Accordion></Accordion>
         </div>
       </div>
+      <Udmeldelse></Udmeldelse>
       <Footer></Footer>
     </div>
   );

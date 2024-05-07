@@ -114,3 +114,44 @@
   background: var(--grey);
   margin-left: -70px;
 }
+
+/******************* Section 3 with accordion *******************/
+.dropout{
+  background: var(--green_gradient);
+  display: flex;
+  color: var(--white);
+  width: 1440px;
+  height: 500px;
+  padding: 40px;
+  justify-content: space-around;
+}
+
+.dropout1 p{
+  font-size: 25px;
+}
+
+.dropout2 p{
+  font-size: 25px;
+}
+
+.dropout2{
+  margin-top: 120px;
+}
+
+.dropout_header{
+  font-size: 60px;
+  margin-bottom: 40px;
+}
+
+.dropout1, .dropout2{
+  width: 600px;
+}
+
+.dropout1 p, .dropout2 p{
+  margin-bottom: 40px;
+}
+
+.dropout_mail{
+  display: flex;
+  align-items: center;
+}
