@@ -2,8 +2,55 @@
   margin-top: 80px;
 }
 
-.shop_intro p {
+.shop_p {
   color: var(--grey);
   font-size: 25px;
-  width: 100px;
+  width: 1000px;
+  margin-bottom: 60px;
+}
+
+.shop_category{
+  color: var(--grey);
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.shop_goods{
+  width: 1440px;
+  display: flex;
+  height: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.shop-card{
+  /* border-radius: 8px; */
+  margin-bottom: 50px;
+  margin-right: 20px;
+}
+
+.shop-card img{
+  margin-bottom: -5px;
+}
+
+.shop-info{
+  width: 300px;
+  height: 190px;
+  background: var(--grey_gradient);
+  padding-left: 15px;
+  padding-top: 10px;
+}
+
+.shop-info div p{
+  color: var(--white);
+  font-size: 18px;
+}
+
+.exp2{
+  padding-bottom: 25px;
+}
+
+.s_name{
+  color: var(--white);
+  margin-bottom: 30px;
 }
