@@ -1,3 +1,9 @@
+.information_container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1440px;
+}
+
 .information_container h1 {
   margin-top: 80px;
   margin-bottom: 10px;
@@ -6,7 +12,8 @@
 .section1_info {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 80px;
+  margin-bottom: 120px;
+  width: 1440px;
 }
 
 .info_picker {
@@ -41,7 +48,8 @@
 .section2_info {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 80px;
+  margin-bottom: 120px;
+  width: 1404px;
 }
 
 .secondary_info {
@@ -66,7 +74,7 @@
   justify-content: space-evenly;
 }
 
-.accordion_wrapper{
+.accordion_wrapper {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -123,7 +131,7 @@
 }
 
 /******************* Section 3 with accordion *******************/
-.dropout{
+.dropout {
   background: var(--green_gradient);
   display: flex;
   color: var(--white);
@@ -133,32 +141,34 @@
   justify-content: space-around;
 }
 
-.dropout1 p{
+.dropout1 p {
   font-size: 25px;
 }
 
-.dropout2 p{
+.dropout2 p {
   font-size: 25px;
 }
 
-.dropout2{
+.dropout2 {
   margin-top: 120px;
 }
 
-.dropout_header{
+.dropout_header {
   font-size: 60px;
   margin-bottom: 40px;
 }
 
-.dropout1, .dropout2{
+.dropout1,
+.dropout2 {
   width: 600px;
 }
 
-.dropout1 p, .dropout2 p{
+.dropout1 p,
+.dropout2 p {
   margin-bottom: 40px;
 }
 
-.dropout_mail{
+.dropout_mail {
   display: flex;
   align-items: center;
 }

@@ -1,3 +1,9 @@
+.contact_container{
+  width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .contact_card {
   display: flex;
 }

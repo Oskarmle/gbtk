@@ -9,8 +9,9 @@ import Hjem from "./pages/hjem";
 import Information from "./pages/information";
 import Kalender from "./pages/kalender";
 import Tilmelding from "./pages/tilmelding";
-import Shop from "./pages/shop";
 import Bestyrelse from "./pages/bestyrelse/index";
+import Shop from "./pages/shop";
+import Errorsite from "./pages/errorsite";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -27,6 +28,7 @@ root.render(
           <Route path="tilmelding" element={<Tilmelding />} />
           <Route path="bestyrelse" element={<Bestyrelse />} />
           <Route path="shop" element={<Shop />} />
+          <Route path="errorsite" element={<Errorsite />} />
         </Route>
       </Routes>
     </BrowserRouter>

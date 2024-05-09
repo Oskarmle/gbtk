@@ -21,6 +21,7 @@ export default function Shop() {
 
   return (
     <div>
+      <div className="shop_container">
       <h1 className="shop_intro">Klub butik</h1>
       <p className="shop_p">
         Vores klubtrøje, bat, træningsjakke mm. kan købes ved at skrive en mail
@@ -37,6 +38,7 @@ export default function Shop() {
         {s_iteminfo2.slice().map((x) => {
           return <ShopItem shop_item={x} />
         })}
+      </div>
       </div>
       <Footer></Footer>
     </div>

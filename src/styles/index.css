@@ -1,32 +1,35 @@
 /* Global css styles */
-:root{
-  --white: #FFFDF6;
+:root {
+  --white: #fffdf6;
   --green: #699451;
   --grey: #444444;
-  --seconday_green: #409C0A;
-  --option_red: #F41D1D;
-  --green_gradient: linear-gradient(#699351, #446F2B);
+  --seconday_green: #409c0a;
+  --option_red: #f41d1d;
+  --green_gradient: linear-gradient(#699351, #446f2b);
   --grey_gradient: linear-gradient(#444444, #212121);
   /* hovers */
-  --green_gradient_hover: linear-gradient(#409C0A, #8CF250);
+  --green_gradient_hover: linear-gradient(#409c0a, #8cf250);
   --grey_gradient_hover: linear-gradient(#444444, #848484);
 }
 
-*{
+* {
   padding: 0;
   border: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-body{
+body {
   background-color: var(--white);
   display: flex;
+  margin-left: auto;
+  margin: auto;
   justify-content: center;
 }
 
-h1{
+h1 {
   color: var(--grey);
   font-size: 65px;
   font-weight: bolder;

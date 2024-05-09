@@ -9,14 +9,16 @@ import "../styles/accordion.css";
 
 export default function Information() {
   return (
-    <div className="information_container">
-      <h1>Information</h1>
-      <Information_start></Information_start>
-      <div className="information_section3">
+    <div>
+      <div className="information_container">
+        <h1>Information</h1>
+        <Information_start></Information_start>
+        <div className="information_section3">
           <Accordion></Accordion>
-        <Udmeldelse></Udmeldelse>
-        <Footer></Footer>
+          <Udmeldelse></Udmeldelse>
+        </div>
       </div>
+          <Footer></Footer>
     </div>
   );
 }
