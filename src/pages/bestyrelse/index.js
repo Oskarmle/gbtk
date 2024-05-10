@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../styles/bestyrelse.css";
-// import Bestyrelse_card from "../../components/bestyrelse_card";
 import Footer from "../../components/footer";
 import { Member } from "../../entities/Member";
 import Bestyrelse_cardItem from "../../components/bestyrelse_cardItem";
+import LoginBox from "../../components/loginBox";
 
 export default function Bestyrelse() {
+  const [isOpen, setIsOpen] = useState(false)
+
+  function toggleOpenLogin(){
+    setIsOpen(!isOpen);
+  }
 
   // Bestyrelsesmedlemmer - Ændre i denne for at opdatere siden med bestyrelsesmedlemmer
   const b_memberinfo =  [
@@ -23,7 +28,14 @@ export default function Bestyrelse() {
   return (
     <div>
       <div className="bestyrelse_container">
-        <h1 className="b_intro">Bestyrelsen</h1>
+        <div className="b_section1">
+          <h1 className="b_intro">Bestyrelsen</h1>
+          <div className="login_button" onClick={toggleOpenLogin}>
+            <img src="../../assets/icons/profile.png" ></img>
+            <p>Login</p>
+          </div>
+        </div>
+        {isOpen && <LoginBox onClose={toggleOpenLogin} />}
         <div className="b_members">
           {b_memberinfo.slice().map((x)=>{
             return <Bestyrelse_cardItem member={x} />

@@ -1,0 +1,51 @@
+.loginBox_container {
+  position: absolute;
+  top: 190px;
+  right: 100px;
+  width: 450px;
+  height: 480px;
+  background: var(--green_gradient);
+}
+
+.loginBox_container img {
+  width: 30px;
+  margin-top: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.form_container {
+  width: 100%;
+  height: 380px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 330px;
+}
+
+form label {
+  color: var(--white);
+  font-size: 25px;
+  padding-bottom: 5px;
+}
+
+form input {
+  background: var(--white);
+  border-radius: 8px;
+  height: 40px;
+  margin-bottom: 30px;
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+.login_button2 {
+  color: var(--white);
+  background: var(--grey_gradient);
+  width: 200px;
+  margin-top: 20px;
+}

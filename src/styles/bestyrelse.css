@@ -8,6 +8,26 @@
     margin-top: 40px;
 }
 
+.b_section1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.login_button{
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.login_button p{
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--grey);
+    padding-left: 7px;
+}
+
 .b_members{
     width: 1440px;
     display: flex;
