@@ -42,14 +42,17 @@ export default function Bestyrelse() {
           })}
         </div>
         <div className="b_fileshow">
+          {/* aoa = vedtægter */}
           <div className="b_aoa b_files">
             <img src="../../../assets/icons/file.png" alt=""></img>
             <h2>Vedtægter</h2>
           </div>
+          {/* gm = generalforsamling */}
           <div className="b_gm b_files">
             <img src="../../../assets/icons/file.png" alt=""></img>
             <h2>Generalforsamling</h2>
           </div>
+          {/* fa = regnskaber */}
           <div className="b_fa b_files">
             <img src="../../../assets/icons/file.png" alt=""></img>
             <h2>Regnskab</h2>

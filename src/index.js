@@ -10,6 +10,7 @@ import Information from "./pages/information";
 import Kalender from "./pages/kalender";
 import Tilmelding from "./pages/tilmelding";
 import Bestyrelse from "./pages/bestyrelse/index";
+import Upload from "./pages/bestyrelse/upload";
 import Shop from "./pages/shop";
 import Errorsite from "./pages/errorsite";
 
@@ -27,8 +28,10 @@ root.render(
           <Route path="kalender" element={<Kalender />} />
           <Route path="tilmelding" element={<Tilmelding />} />
           <Route path="bestyrelse" element={<Bestyrelse />} />
+          <Route path="bestyrelse/upload" element={<Upload />} />
           <Route path="shop" element={<Shop />} />
           <Route path="errorsite" element={<Errorsite />} />
+
         </Route>
       </Routes>
     </BrowserRouter>
