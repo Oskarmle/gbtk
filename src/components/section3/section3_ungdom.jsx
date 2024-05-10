@@ -1,7 +1,21 @@
 import React from "react";
 import "../../styles/section3.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Section3_ungdom() {
+  const navigate = useNavigate();
+
+  function ungdomClick(event) {
+    event.preventDefault();
+    navigate("information");
+    setTimeout(() => {
+      window.scrollTo({
+        top: "1000",
+        behavior: "smooth",
+      });
+    }, 100);
+  }
+
   return (
     <div className="fp_section3_container">
       <img src="../../assets/ungdom.jpg" alt="" />
@@ -12,9 +26,9 @@ export default function Section3_ungdom() {
           stræber efter at det skal være sjovt at lære, men samtidig prøve at
           blive bedre
         </p>
-        <a href="" className="section3_CTA">
+        <p className="section3_CTA" onClick={ungdomClick}>
           Læs mere her
-        </a>
+        </p>
       </div>
     </div>
   );

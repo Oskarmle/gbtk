@@ -1,7 +1,21 @@
 import React from "react";
 import "../../styles/section3.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Section3_60plus() {
+  const navigate = useNavigate();
+
+  function plusClick(event) {
+    event.preventDefault();
+    navigate("information");
+    setTimeout(() => {
+      window.scrollTo({
+        top: "2100",
+        behavior: "smooth",
+      });
+    }, 100);
+  }
+
   return (
     <div className="fp_section3_container">
       <img src="../../assets/60plus.jpg" alt="" />
@@ -12,9 +26,9 @@ export default function Section3_60plus() {
           være med og heldigvis er der mange både damer og herrer, med meget
           forskelligt niveau og teknikker
         </p>
-        <a href="" className="section3_CTA">
+        <p className="section3_CTA" onClick={plusClick}>
           Læs mere her
-        </a>
+        </p>
       </div>
     </div>
   );

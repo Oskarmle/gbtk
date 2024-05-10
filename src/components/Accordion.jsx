@@ -54,7 +54,7 @@ export default function Accordion() {
     <div>
       <div className="section3_content">
         {/* ungdom */}
-        <div className="accordion_wrapper">
+        <div className="accordion_wrapper" id="ungdom">
           <Information_path></Information_path>
           <div className="path_line"></div>
           <div className="accordion_container">
@@ -72,7 +72,7 @@ export default function Accordion() {
           </div>
         </div>
         {/* 60plus */}
-        <div className="accordion_wrapper">
+        <div className="accordion_wrapper" id="60plus">
           <Information_path></Information_path>
           <div className="path_line"></div>
           <div className="accordion_container">
@@ -90,7 +90,7 @@ export default function Accordion() {
           </div>
         </div>
         {/* Senior */}
-        <div className="accordion_wrapper">
+        <div className="accordion_wrapper" id="senior">
           <Information_path></Information_path>
           <div className="path_line"></div>
           <div className="accordion_container">
@@ -108,7 +108,7 @@ export default function Accordion() {
           </div>
         </div>
         {/* kontingent */}
-        <div className="accordion_wrapper">
+        <div className="accordion_wrapper" id="kontingent">
           <Information_path></Information_path>
           <div className="path_line"></div>
           <div className="accordion_container">
@@ -126,7 +126,7 @@ export default function Accordion() {
           </div>
         </div>
         {/* træningstider */}
-        <div className="accordion_wrapper">
+        <div className="accordion_wrapper" id="training">
           <Information_path></Information_path>
           <div className="path_line"></div>
           <div className="accordion_container">

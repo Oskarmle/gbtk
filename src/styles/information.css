@@ -39,10 +39,12 @@
   justify-content: space-between;
 }
 
-.info_content a {
+.info_content p {
   margin-bottom: 20px;
   font-size: 28px;
   font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .section2_info {
@@ -56,6 +58,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
 }
 
 .secondary_info h4 {

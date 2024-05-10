@@ -26,4 +26,6 @@
     margin-top: 305px;
     font-size: 28px;
     font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
 }
