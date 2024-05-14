@@ -1,5 +1,6 @@
 import React from "react";
 import "../../styles/upload.css";
+
 import File_upload from "../../components/file_upload";
 import News_updater from "../../components/news_updater";
 

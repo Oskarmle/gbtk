@@ -27,9 +27,10 @@
 
 .file_uploader_container, .news_updater_container{
     width: 400px;
-    height: 500px;
+    height: 470px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     /* background: darkblue; */
 }
 
@@ -48,8 +49,17 @@
     padding-left: 15px;
 }
 
-.file_form{
+.file_form, .news_form{
     margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    height: 400px;
+}
+
+.file_form button, .news_form button{
+    margin: 0;
+   
+    /* justify-self: flex-end; */
 }
 
 .file_form label{
@@ -72,4 +82,22 @@
     width: 5px;
     border-radius: 6px;
     background: var(--grey);
+}
+
+.news_form textarea{
+    background: var(--grey);
+    height: 300px;
+    margin: 0;
+    color: var(--white);
+    font-size: 25px;
+    border-radius: 8px;
+    resize: none;
+}
+
+.news_form label{
+    color: var(--grey);
+}
+
+.news_form button{
+    margin-top: 20px;
 }
