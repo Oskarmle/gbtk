@@ -8,6 +8,7 @@
     margin-top: 80px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .bestyrelse_upload_container h1{
@@ -100,4 +101,60 @@
 
 .news_form button{
     margin-top: 20px;
+}
+
+.B_news_section{
+    width: 400px;
+    height: 500px;
+    background: var(--green_gradient);
+    border-radius: 8px;
+}
+
+.news_section_header{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.news_section_header h4{
+    font-size: 30px;
+    color: var(--white);
+    padding-left: 10px;
+}
+
+.news_display{
+    padding-left: 20px;
+    padding-right: 20px;
+    height:410px;
+    overflow-y: scroll;
+}
+
+.news_display::-webkit-scrollbar{
+    width: 5px;
+    margin-right: 5px;
+}
+
+.news_display::-webkit-scrollbar-thumb{
+    background: var(--grey);
+}
+
+.news_display_item{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.news_display p{
+    font-size: 18px;
+    color: var(--white);
+    padding-bottom: 5px;
+}
+
+.horizontal_line{
+    background: var(--white);
+    height: 2px;
+    width: 100%;
+    border-radius: 2px;
 }
