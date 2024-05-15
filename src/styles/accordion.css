@@ -22,7 +22,7 @@
 
 .accordion_content{
     color: var(--grey);
-    font-size: 18px;
+    font-size: 24px;
     padding-left: 15px;
     margin-top: 10px;
     max-height: 0;

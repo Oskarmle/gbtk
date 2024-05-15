@@ -66,6 +66,10 @@
   cursor: pointer;
 }
 
+/* .secondary_info h4:hover{
+  font-size: 28px;
+} */
+
 .secondary_info h4 {
   padding-top: 5px;
   font-size: 25px;

@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import "../styles/loginBox.css";
 import { createClient } from "@supabase/supabase-js";
+import { useNavigate } from "react-router-dom";
 
 export default function LoginBox({ onClose }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+
+  const navigate = useNavigate();
 
   const supabase = createClient(
     "https://ofghfzhdqyybxseootsl.supabase.co",
@@ -22,10 +25,9 @@ export default function LoginBox({ onClose }) {
     // console.log(event.target.value)
   }
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
     loginuser();
-    // console.log("you are logged ind succedfully")
     setError("");
   }
 
@@ -38,6 +40,9 @@ export default function LoginBox({ onClose }) {
     if (error) {
       setError("Du har brugt forkert email eller adgangskode.");
       console.log({ error });
+    } else if (data) {
+      console.log("user is logged in");
+      navigate("upload")
     }
   }
 

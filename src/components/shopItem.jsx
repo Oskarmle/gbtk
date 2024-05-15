@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ShopItem(shop_item) {
+export default function ShopItem({shop_item}) {
   return (
     <div className="shop-card">
       <img src={shop_item.image} alt="" />
