@@ -28,4 +28,9 @@
     font-weight: bold;
     text-decoration: underline;
     cursor: pointer;
+    transition: font-size 160ms ease-in-out;
+}
+
+.section3_CTA:hover{
+    font-size: 32px;
 }

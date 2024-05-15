@@ -45,6 +45,11 @@
   font-weight: bold;
   text-decoration: underline;
   cursor: pointer;
+  transition: font-size 160ms ease-in-out;
+}
+
+.info_content p:hover{
+  font-size: 32px;
 }
 
 .section2_info {

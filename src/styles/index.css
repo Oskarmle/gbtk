@@ -8,8 +8,8 @@
   --green_gradient: linear-gradient(#699351, #446f2b);
   --grey_gradient: linear-gradient(#444444, #212121);
   /* hovers */
-  --green_gradient_hover: linear-gradient(#409c0a, #8cf250);
-  --grey_gradient_hover: linear-gradient(#444444, #848484);
+  --green_hover: #59c51a;
+  --grey_hover: #6d6d6d;
 }
 
 * {

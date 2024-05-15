@@ -61,6 +61,11 @@ button {
   font-size: 25px;
   color: var(--white);
   font-weight: bold;
+  transition: background 160ms ease-in-out;
+}
+
+button:hover{
+  background: var(--green_hover);
 }
 
 /***************************** SPONSOR *******************************/

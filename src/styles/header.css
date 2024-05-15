@@ -27,12 +27,28 @@
 
 .header_link h3 {
   font-size: 23px;
+  border-right: 20px;
+  transition: font-size 160ms ease-in-out;
+}
+
+.header_link h3:hover{
+  font-size: 25px;
 }
 
 .logo {
   height: 50px;
+  transition: 0ms;
 }
 
 .logo_img_container {
   padding-left: 20px;
 }
+
+/* @keyframes zoom_in{
+  0% {
+    font-size: 23px;
+  }
+  100% {
+    font-size: 25px;
+  }
+} */

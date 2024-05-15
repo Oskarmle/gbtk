@@ -36,7 +36,7 @@ export default function Shop() {
       <h2 className="shop_category">Bordtennisbat og diverse</h2>
       <div className="shop_goods">
         {s_iteminfo2.slice().map((x) => {
-          return <ShopItem shop_item={x} />
+          return <ShopItem shop_item={x} key={x} />
         })}
       </div>
       </div>
