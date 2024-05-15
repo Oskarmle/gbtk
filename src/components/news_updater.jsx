@@ -1,7 +1,7 @@
 import { createClient } from "@supabase/supabase-js";
 import React, { useState } from "react";
 
-export default function News_updater() {
+export default function News_updater({ fetchNewsData }) {
   const [description, setDescription] = useState("");
 
   const supabase = createClient(
@@ -16,22 +16,21 @@ export default function News_updater() {
 
   function handleInfoChange(event) {
     event.preventDefault();
-    newsImportantInfo()
+    newsImportantInfo();
+    setDescription("");
   }
 
+  // inserting data into table "important_news"
   async function newsImportantInfo() {
     const { data, error } = await supabase
-    .from("important_news")
-    .insert([{description}])
-    if (error){
-      console.log(error)
+      .from("important_news")
+      .insert([{ description }]);
+    if (error) {
+      console.log(error);
     } else {
-      console.log("inserted data succesfully", data)
+      console.log("inserted data succesfully", data);
+      fetchNewsData();
     }
-  }
-
-  function refresh_page(){
-    
   }
 
   return (
@@ -42,7 +41,7 @@ export default function News_updater() {
       </div>
       <form className="news_form" onSubmit={handleInfoChange}>
         <label>Tekst</label>
-        <textarea type="text" onChange={handleTextChange} />
+        <textarea type="text" onChange={handleTextChange} value={description}/>
         <button type="submit">Opdater</button>
       </form>
     </div>

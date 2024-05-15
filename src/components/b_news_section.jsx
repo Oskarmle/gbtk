@@ -1,10 +1,9 @@
 import { createClient } from "@supabase/supabase-js";
 import React, { useEffect, useState } from "react";
 import B_newsItem from "./b_newsItem";
-import { News } from "../entities/news";
+// import { News } from "../entities/news";
 
-export default function B_news_section() {
-  const [bnews, setBnews] = useState([]);
+export default function B_news_section({ fetchNewsData, bnews }) {
 
   const supabase = createClient(
     "https://ofghfzhdqyybxseootsl.supabase.co",
@@ -15,24 +14,7 @@ export default function B_news_section() {
     fetchNewsData();
   }, []);
 
-  async function fetchNewsData() {
-    const { data, error } = await supabase
-      .from("important_news")
-      .select();
-    if (error) {
-      console.error("Error fetching data:", error);
-    } else {
-      console.log("Fetched data:", data);
-      // Map data to News instances
-      const newsData = data.map(
-        item => new News(item.id, item.description, item.created_at)
-      );
-      setBnews(newsData);
-    }
-  }
-
   async function handleDelete(id) {
-
     const { data, error } = await supabase
       .from("important_news")
       .delete()
@@ -40,7 +22,7 @@ export default function B_news_section() {
     if (error) {
       console.log("error deleting news", error);
     } else {
-      setBnews(bnews.filter(newsItem => newsItem.id !== id));
+      fetchNewsData();
     }
   }
 
@@ -51,7 +33,7 @@ export default function B_news_section() {
         <h4>Vigtig info</h4>
       </div>
       <div className="news_display">
-        {bnews.map((newsItem, index) => (
+        {bnews.slice().reverse().map((newsItem, index) => (
           <B_newsItem
             key={index}
             news={newsItem}
