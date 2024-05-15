@@ -142,8 +142,21 @@
 
 .news_display_item{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
     margin-top: 10px;
+}
+
+.news_display_item div{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.news_display_item div p{
+    width: 370px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .news_display p{
@@ -157,4 +170,16 @@
     height: 2px;
     width: 100%;
     border-radius: 2px;
+}
+
+.delete_button{
+    width: 25px;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.delete_button img{
+    cursor: pointer;
+    width: 25px;
 }

@@ -13,22 +13,35 @@ export default function B_news_section() {
 
   useEffect(() => {
     fetchNewsData();
-
   }, []);
 
   async function fetchNewsData() {
-      const { data, error } = await supabase
-        .from("important_news")
-        .select();
-      if (error) {
-        console.error("Error fetching data:", error);
-      } else {
-        console.log("Fetched data:", data);
-        // Map data to News instances
-        const newsData = data.map(item => new News(item.description, item.created_at));
-        setBnews(newsData);
-      }
+    const { data, error } = await supabase
+      .from("important_news")
+      .select();
+    if (error) {
+      console.error("Error fetching data:", error);
+    } else {
+      console.log("Fetched data:", data);
+      // Map data to News instances
+      const newsData = data.map(
+        item => new News(item.id, item.description, item.created_at)
+      );
+      setBnews(newsData);
+    }
+  }
 
+  async function handleDelete(id) {
+
+    const { data, error } = await supabase
+      .from("important_news")
+      .delete()
+      .eq("id", id);
+    if (error) {
+      console.log("error deleting news", error);
+    } else {
+      setBnews(bnews.filter(newsItem => newsItem.id !== id));
+    }
   }
 
   return (
@@ -39,7 +52,11 @@ export default function B_news_section() {
       </div>
       <div className="news_display">
         {bnews.map((newsItem, index) => (
-          <B_newsItem key={index} news={newsItem} />
+          <B_newsItem
+            key={index}
+            news={newsItem}
+            onDelete={() => handleDelete(newsItem.id)}
+          />
         ))}
       </div>
     </div>

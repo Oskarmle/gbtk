@@ -30,6 +30,10 @@ export default function News_updater() {
     }
   }
 
+  function refresh_page(){
+    
+  }
+
   return (
     <div className="news_updater_container">
       <div className="news_update_header">
