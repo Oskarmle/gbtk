@@ -2,7 +2,7 @@
   width: 100vw;
   height: 150px;
   background: var(--grey_gradient);
-  margin-top: 80px;
+  margin-top: 200px;
   display: flex;
   justify-content: center;
   /* justify-content: space-around; */
@@ -50,4 +50,13 @@ a {
 
 .footer_section4 {
   padding-left: 60px;
+}
+
+.footer_section3 a{
+  font-size: 16px;
+  transition: font-size 160ms ease-in-out;
+}
+
+.footer_section3 a:hover{
+  font-size: 17px;
 }

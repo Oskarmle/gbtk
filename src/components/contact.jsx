@@ -34,7 +34,7 @@ export default function Contact() {
             <div className="transport">
               <p>Der er flere busser som stopper tæt på</p>
               <p>Du kan se hvilke via rejseplanen.dk eller linket herunder:</p>
-              <a href="">Tjek Rejseplanen her</a>
+              <a target="_blank" href="https://www.rejseplanen.dk/webapp/index.html?language=da_DA#!sition|1!Z|gladsaxevej%20200">Tjek Rejseplanen her</a>
             </div>
           </div>
         </div>

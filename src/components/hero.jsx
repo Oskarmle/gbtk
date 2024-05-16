@@ -1,6 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Hero() {
+  const navigate = useNavigate();
+
+  function handleClick() {
+    navigate("tilmelding")
+  }
+
   return (
     <div className="hero">
       <div className="overlay"></div>
@@ -30,7 +37,7 @@ export default function Hero() {
           <p>Mandage 09-12</p>
         </div>
         <div className="line_white"></div>
-        <button>Tilmeld</button>
+        <button onClick={handleClick}>Tilmeld</button>
       </div>
     </div>
   );
