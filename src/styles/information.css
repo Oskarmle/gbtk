@@ -153,14 +153,6 @@
   justify-content: space-around;
 }
 
-.dropout1 p {
-  font-size: 25px;
-}
-
-.dropout2 p {
-  font-size: 25px;
-}
-
 .dropout2 {
   margin-top: 120px;
 }
@@ -178,9 +170,21 @@
 .dropout1 p,
 .dropout2 p {
   margin-bottom: 40px;
+  font-size: 25px;
 }
 
 .dropout_mail {
   display: flex;
   align-items: center;
+  gap: 10px;
+}
+
+.dropout_mail p{
+  margin: 0;
+}
+
+.dropout_q{
+  text-decoration: underline;
+  font-weight: bold;
+  cursor: pointer;
 }
