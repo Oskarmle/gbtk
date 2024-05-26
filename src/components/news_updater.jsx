@@ -1,13 +1,11 @@
-import { createClient } from "@supabase/supabase-js";
 import React, { useState } from "react";
+import { useContext } from "react";
+import { UserContext } from "../index";
 
 export default function News_updater({ fetchNewsData }) {
   const [description, setDescription] = useState("");
+  const { supabaseClient } = useContext(UserContext);
 
-  const supabase = createClient(
-    "https://ofghfzhdqyybxseootsl.supabase.co",
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9mZ2hmemhkcXl5YnhzZW9vdHNsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTUzMzYwNTQsImV4cCI6MjAzMDkxMjA1NH0.nLMHhcrf3ykrxuwAbZUilGtrc-cNLxnwMnC6YrqdQ0s"
-  );
 
   function handleTextChange(event) {
     setDescription(event.target.value);
@@ -22,7 +20,7 @@ export default function News_updater({ fetchNewsData }) {
 
   // inserting data into table "important_news"
   async function newsImportantInfo() {
-    const { data, error } = await supabase
+    const { data, error } = await supabaseClient
       .from("important_news")
       .insert([{ description }]);
     if (error) {

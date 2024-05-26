@@ -1,22 +1,19 @@
 import React, { useEffect, useState } from "react";
 import Frontpage_newsItem from "./frontpage_newsItem";
-import { createClient } from "@supabase/supabase-js";
 import { News } from "../entities/news";
+import { useContext } from "react";
+import { UserContext } from "../index";
 
 export default function Important_news() {
   const [fnews, setFnews] = useState([])
-
-  const supabase = createClient(
-    "https://ofghfzhdqyybxseootsl.supabase.co",
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9mZ2hmemhkcXl5YnhzZW9vdHNsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTUzMzYwNTQsImV4cCI6MjAzMDkxMjA1NH0.nLMHhcrf3ykrxuwAbZUilGtrc-cNLxnwMnC6YrqdQ0s"
-  );
+  const { supabaseClient } = useContext(UserContext);
 
   useEffect(() => {
     fetchFrontPageData()
   }, []);
 
   async function fetchFrontPageData() {
-    const { data, error } = await supabase
+    const { data, error } = await supabaseClient
     .from("important_news")
     .select()
     if (error) {

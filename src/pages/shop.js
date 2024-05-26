@@ -6,6 +6,7 @@ import Footer from "../components/footer";
 import Header from "../components/header";
 
 export default function Shop() {
+  
   const s_iteminfo1 = [
     new Shopitem_goods("../../assets/shop_temp.jpg", "Klubtrøje", "Størrelse", "xs s m l xl", "250 kr."),
     new Shopitem_goods("../../assets/shop_temp.jpg", "Klubtrøje", "Størrelse", "xs s m l xl", "250 kr."),

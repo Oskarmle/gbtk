@@ -9,7 +9,7 @@ export default function LoginBox({ onClose }) {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
-  const supabase = useContext(UserContext);
+  const { supabaseClient } = useContext(UserContext);
   const { handleLogin } = useContext(UserContext);
 
   function handleEmailChange(event) {
@@ -30,7 +30,7 @@ export default function LoginBox({ onClose }) {
 
   // function to log in user
   async function loginUser() {
-    const { error } = await supabase.auth.signInWithPassword({
+    const { error } = await supabaseClient.auth.signInWithPassword({
       email: email,
       password: password,
     });
@@ -39,8 +39,8 @@ export default function LoginBox({ onClose }) {
       console.log({ error });
     } else {
       console.log("user is logged in");
-      handleLogin();
-      navigate("/bestyrelse/upload");
+      // handleLogin();
+      // navigate("/bestyrelse/upload");
     }
   }
 

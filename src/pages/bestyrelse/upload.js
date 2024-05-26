@@ -12,21 +12,22 @@ import Header from "../../components/header";
 
 export default function Upload() {
   const [bnews, setBnews] = useState([]);
-  const supabase = useContext(UserContext)
+  const supabaseClient = useContext(UserContext)
 
-
-  useEffect(() => {
-    getUserData()
-  }, []);
+  // useEffect(() => {
+  //   getUserData()
+  // }, []);
   
-  async function getUserData(){
-    const { data: { user } } = await supabase.auth.getUser()
-    console.log(user)
-  }
+  // async function getUserData(){
+  //   const { data: { user } } = await supabaseClient.auth.getUser()
+  //   console.log(user)
+  // }
 
   // fetching data from table in database
   async function fetchNewsData() {
-    const { data, error } = await supabase.from("important_news").select();
+    const { data, error } = await supabaseClient
+    .from("important_news")
+    .select();
     if (error) {
       console.error("Error fetching data:", error);
     } else {
