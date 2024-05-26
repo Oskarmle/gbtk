@@ -6,33 +6,32 @@ import News_updater from "../../components/news_updater";
 import B_news_section from "../../components/b_news_section";
 import { News } from "../../entities/news";
 import { createClient } from "@supabase/supabase-js";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 export default function Upload() {
   const [bnews, setBnews] = useState([]);
-  const [user, setUser] = useState(null);
+  // const [user, setUser] = useState(null);
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const supabase = createClient(
     "https://ofghfzhdqyybxseootsl.supabase.co",
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9mZ2hmemhkcXl5YnhzZW9vdHNsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTUzMzYwNTQsImV4cCI6MjAzMDkxMjA1NH0.nLMHhcrf3ykrxuwAbZUilGtrc-cNLxnwMnC6YrqdQ0s"
   );
 
-  useEffect(() => {
-    checkAuth();
+  // useEffect(() => {
+  //   checkAuth();
+  // }, [navigate, supabase]);
 
-  }, [navigate, supabase]);
-
-  async function checkAuth() {
-    const { user: authUser } = await supabase.auth.getUser();
-    if (authUser) {
-      setUser(authUser);
-    } else {
-      console.log("User is not authenticated");
-      // navigate("bestyrelse")
-    }
-  }
+  // async function checkAuth() {
+  //   const { user: authUser } = await supabase.auth.getUser();
+  //   if (authUser) {
+  //     setUser(authUser);
+  //   } else {
+  //     console.log("User is not authenticated");
+  //     navigate("bestyrelse")
+  //   }
+  // }
 
   // fetching data from table in database
   async function fetchNewsData() {

@@ -26,7 +26,7 @@ export default function Tilmedling() {
           <Kontingent></Kontingent>
           <div>
             <div className="join_formula">
-              <img src="../../assets/icons/profile.png"></img>
+              <img src="../../assets/icons/profile.png" alt=""></img>
               <h2>Personlig information</h2>
             </div>
             <iframe
