@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/information.css";
-import Information_start from "../components/information_start";
+import Information_start from "../components/informationStart";
 import Footer from "../components/footer";
 import Accordion from "../components/Accordion";
 import Header from "../components/header";

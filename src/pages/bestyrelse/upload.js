@@ -14,10 +14,15 @@ export default function Upload() {
   const [bnews, setBnews] = useState([]);
   const supabase = useContext(UserContext)
 
-  // const supabase = createClient(
-  //   "https://ofghfzhdqyybxseootsl.supabase.co",
-  //   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9mZ2hmemhkcXl5YnhzZW9vdHNsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTUzMzYwNTQsImV4cCI6MjAzMDkxMjA1NH0.nLMHhcrf3ykrxuwAbZUilGtrc-cNLxnwMnC6YrqdQ0s"
-  // );
+
+  useEffect(() => {
+    getUserData()
+  }, []);
+  
+  async function getUserData(){
+    const { data: { user } } = await supabase.auth.getUser()
+    console.log(user)
+  }
 
   // fetching data from table in database
   async function fetchNewsData() {

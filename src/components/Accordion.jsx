@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import Information_path from "./information_path";
+import Information_path from "./informationPath";
 import { dataUngdom } from "../data/AccordionData";
 import { data60plus } from "../data/AccordionData";
 import { dataSenior } from "../data/AccordionData";

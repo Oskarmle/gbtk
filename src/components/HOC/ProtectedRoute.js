@@ -5,12 +5,13 @@ import { useUser } from '@supabase/auth-helpers-react';
 const ProtectedRoute = ({ children }) => {
   const { user } = useUser();
 
-  if (!user || user === null) {
+  // Check if user is authenticated
+  if (!user) {
+    // If not authenticated, redirect to login page
     return <Navigate to="/bestyrelse" />;
-  } else {
-
   }
 
+  // If user is authenticated, render the children (protected content)
   return children;
 };
 

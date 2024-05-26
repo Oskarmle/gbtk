@@ -1,20 +1,16 @@
 import React, { useState } from "react";
 import "../styles/loginBox.css";
-// import { createClient } from "@supabase/supabase-js";
 import { useNavigate } from "react-router-dom";
-import { useSupabaseClient } from "@supabase/auth-helpers-react";
+import { useContext } from "react";
+import { UserContext } from "../index";
 
 export default function LoginBox({ onClose }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const supabaseClient = useSupabaseClient();
   const navigate = useNavigate();
-
-  // const supabase = createClient(
-  //   "https://ofghfzhdqyybxseootsl.supabase.co",
-  //   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9mZ2hmemhkcXl5YnhzZW9vdHNsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTUzMzYwNTQsImV4cCI6MjAzMDkxMjA1NH0.nLMHhcrf3ykrxuwAbZUilGtrc-cNLxnwMnC6YrqdQ0s"
-  // );
+  const supabase = useContext(UserContext);
+  const { handleLogin } = useContext(UserContext);
 
   function handleEmailChange(event) {
     setEmail(event.target.value);
@@ -28,23 +24,23 @@ export default function LoginBox({ onClose }) {
 
   async function handleSubmit(event) {
     event.preventDefault();
-    loginuser();
+    loginUser();
     setError("");
   }
 
   // function to log in user
-  async function loginuser() {
-    const { data, error } = await supabaseClient.auth.signInWithPassword({
+  async function loginUser() {
+    const { error } = await supabase.auth.signInWithPassword({
       email: email,
       password: password,
     });
     if (error) {
       setError("Du har brugt forkert email eller adgangskode.");
       console.log({ error });
-      // navigate("/hjem");
-    } else if (data) {
+    } else {
       console.log("user is logged in");
-      navigate("/upload");
+      handleLogin();
+      navigate("/bestyrelse/upload");
     }
   }
 
