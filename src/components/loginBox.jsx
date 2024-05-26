@@ -41,6 +41,7 @@ export default function LoginBox({ onClose }) {
     if (error) {
       setError("Du har brugt forkert email eller adgangskode.");
       console.log({ error });
+      // navigate("/hjem");
     } else if (data) {
       console.log("user is logged in");
       navigate("/upload");

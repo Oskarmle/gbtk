@@ -1,10 +1,12 @@
 import React from "react";
 import "../styles/errorsite.css";
 import Footer from "../components/footer";
+import Header from "../components/header";
 
 export default function errorsite() {
   return (
     <div>
+      <Header></Header>
       <div className="error_container">
         <img src="../../assets/icons/error.png" alt=""></img>
         <h1>Siden eksisterer ikke</h1>

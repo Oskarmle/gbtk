@@ -3,6 +3,7 @@ import "../styles/shop.css";
 import ShopItem from "../components/shopItem";
 import { Shopitem_goods } from "../entities/Shopitem_goods"
 import Footer from "../components/footer";
+import Header from "../components/header";
 
 export default function Shop() {
   const s_iteminfo1 = [
@@ -21,6 +22,7 @@ export default function Shop() {
 
   return (
     <div>
+      <Header></Header>
       <div className="shop_container">
       <h1 className="shop_intro">Klub butik</h1>
       <p className="shop_p">

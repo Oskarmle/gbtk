@@ -1,10 +1,12 @@
 import React from "react";
 import "../styles/kalender.css";
 import Footer from "../components/footer";
+import Header from "../components/header";
 
 export default function Kalender() {
   return (
     <div>
+      <Header></Header>
       <div className="calender">
         <h1>Kalender</h1>
         <iframe

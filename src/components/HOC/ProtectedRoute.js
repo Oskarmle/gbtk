@@ -7,7 +7,9 @@ const ProtectedRoute = ({ children }) => {
 
   if (!user || user === null) {
     return <Navigate to="/bestyrelse" />;
-  } 
+  } else {
+
+  }
 
   return children;
 };

@@ -2,10 +2,12 @@ import React from "react";
 import "../styles/tilmeld.css";
 import Kontingent from "../components/kontingent";
 import Footer from "../components/footer";
+import Header from "../components/header";
 
 export default function Tilmedling() {
   return (
     <>
+    <Header></Header>
       <div className="join_container">
         <h1>Tilmeld dig klubben</h1>
         <p>

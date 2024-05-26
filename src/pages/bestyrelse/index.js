@@ -4,6 +4,7 @@ import Footer from "../../components/footer";
 import { Member } from "../../entities/Member";
 import Bestyrelse_cardItem from "../../components/bestyrelse_cardItem";
 import LoginBox from "../../components/loginBox";
+import Header from "../../components/header";
 
 export default function Bestyrelse() {
   const [isOpen, setIsOpen] = useState(false)
@@ -27,6 +28,7 @@ export default function Bestyrelse() {
 
   return (
     <div>
+      <Header></Header>
       <div className="bestyrelse_container">
         <div className="b_section1">
           <h1 className="b_intro">Bestyrelsen</h1>

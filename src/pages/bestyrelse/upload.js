@@ -1,37 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "../../styles/upload.css";
 import Footer from "../../components/footer";
 import File_upload from "../../components/file_upload";
 import News_updater from "../../components/news_updater";
 import B_news_section from "../../components/b_news_section";
 import { News } from "../../entities/news";
-import { createClient } from "@supabase/supabase-js";
+import { UserContext } from "../../index"
+import Header from "../../components/header";
+// import { createClient } from "@supabase/supabase-js";
 // import { useNavigate } from "react-router-dom";
 
 export default function Upload() {
   const [bnews, setBnews] = useState([]);
-  // const [user, setUser] = useState(null);
+  const supabase = useContext(UserContext)
 
-  // const navigate = useNavigate();
-
-  const supabase = createClient(
-    "https://ofghfzhdqyybxseootsl.supabase.co",
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9mZ2hmemhkcXl5YnhzZW9vdHNsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTUzMzYwNTQsImV4cCI6MjAzMDkxMjA1NH0.nLMHhcrf3ykrxuwAbZUilGtrc-cNLxnwMnC6YrqdQ0s"
-  );
-
-  // useEffect(() => {
-  //   checkAuth();
-  // }, [navigate, supabase]);
-
-  // async function checkAuth() {
-  //   const { user: authUser } = await supabase.auth.getUser();
-  //   if (authUser) {
-  //     setUser(authUser);
-  //   } else {
-  //     console.log("User is not authenticated");
-  //     navigate("bestyrelse")
-  //   }
-  // }
+  // const supabase = createClient(
+  //   "https://ofghfzhdqyybxseootsl.supabase.co",
+  //   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9mZ2hmemhkcXl5YnhzZW9vdHNsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTUzMzYwNTQsImV4cCI6MjAzMDkxMjA1NH0.nLMHhcrf3ykrxuwAbZUilGtrc-cNLxnwMnC6YrqdQ0s"
+  // );
 
   // fetching data from table in database
   async function fetchNewsData() {
@@ -49,6 +35,7 @@ export default function Upload() {
   }
   return (
     <div>
+      <Header></Header>
       <div className="bestyrelse_upload_container">
         <h1>Uploadside</h1>
         <p>
@@ -68,4 +55,4 @@ export default function Upload() {
       <Footer></Footer>
     </div>
   );
-}
+};
