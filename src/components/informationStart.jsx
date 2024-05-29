@@ -1,46 +1,25 @@
 import React from "react";
 
-export default function Information_start() {
-
+export default function Information_start({JoinClick, KontingentClick, PlusClick, UngdomClick, SeniorClick, GeneralClick}) {
+  
   function handleUngdomClick(){
-    window.scrollTo({
-      top: 1000,
-      behavior: "smooth"
-    })
-  };
-
-  function handleSeniorClick(){
-    window.scrollTo({
-      top: 1600,
-      behavior: "smooth"
-  })
-}
-  function handlePlusClick(){
-    window.scrollTo({
-      top: 2100,
-      behavior: "smooth"
-  })
-}
+    UngdomClick()
+  }
+  function handleJoinClick(){
+    JoinClick()
+  }
   function handleKontingentClick(){
-    window.scrollTo({
-      top: 2800,
-      behavior: "smooth"
-  })
-}
-  function handleTrainingClick(){
-    window.scrollTo({
-      top: 3200,
-      behavior: "smooth"
-  })
-}
-  function handleDropoutClick(){
-    window.scrollTo({
-      top: 3400,
-      behavior: "smooth"
-  })
-}
-
-
+    KontingentClick()
+  }
+  function handlePlusClick(){
+    PlusClick()
+  }
+  function handleSeniorClick(){
+    SeniorClick()
+  }
+  function handleGeneralClick(){
+    GeneralClick()
+  }
 
   return (
     <div>
@@ -72,13 +51,13 @@ export default function Information_start() {
           <img src="../../assets/icons/kontingent.png" alt="" />
           <h4>Kontingent</h4>
         </div>
-        <div className="tider secondary_info" onClick={handleTrainingClick}>
-          <img src="../../assets/icons/træningstider.png" alt="" />
-          <h4>Træningstider</h4>
+        <div className="tider secondary_info" onClick={handleGeneralClick}>
+          <img src="../../assets/icons/general.png" alt="" />
+          <h4>Generelt</h4>
         </div>
-        <div className="udmeldelse secondary_info" onClick={handleDropoutClick}>
-          <img src="../../assets/icons/udmeldelse.png" alt="" />
-          <h4>Udmeldelse</h4>
+        <div className="udmeldelse secondary_info" onClick={handleJoinClick}>
+          <img src="../../assets/icons/join.png" alt="" />
+          <h4>Indmeldelse</h4>
         </div>
       </div>
     </div>

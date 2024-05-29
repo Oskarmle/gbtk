@@ -15,7 +15,7 @@
 }
 
 .header a{
-    margin-right: 60px;
+    margin-right: 40px;
 }
 
 .header_link {
@@ -26,13 +26,13 @@
 }
 
 .header_link h3 {
-  font-size: 23px;
+  font-size: 20px;
   border-right: 20px;
   transition: font-size 160ms ease-in-out;
 }
 
 .header_link h3:hover{
-  font-size: 25px;
+  font-size: 23px;
 }
 
 .logo {

@@ -79,7 +79,7 @@
   ];
   
   // Accordion temporary data senior
-  export const dataTrainingtimes = [
+  export const dataGeneral = [
     {
       question:"Træningstider",
       answer: "Seniortræning er mandag og onsdag fra kl. 19.00 - 21.00. 60+ træner mandag til fredag fra kl. 09.00 - 13.00. Ungdom træningstider står under punktet ungdom højere oppe",
@@ -87,5 +87,9 @@
     {
       question:"Lukkedage og vigtige datoer sæsonen 2023/2024",
       answer: "Gladsaxe BTK følger skolekalenderen i Gladsaxe kommune og har lukket i skolernes ferier. Sæsonstart: Mandag den 21. august 2023. Efterårsferie: Uge 42 - lukket. Juleafslutning - ungdom: Dato følger. Juleafslutning - senior: Dato følger. Juleafslutning - 60+: Dato følger. Juleferie: Fra og med torsdag d. 21-12-2023 til og med onsdag d. 03-01-2024. Vinterferie: Uge 7 - lukket. Påskeferie: Uge 13, samt mandag i uge 14, 2024. Generalforsamling: Mandag d. 22. april 2024 (tilmelding nødvendig). Klubmesterskab - senior: Mandag d. 6. maj 2024. 2. Pinsedag: Mandag d. 20. maj 2024. Sæsonafslutning: Fredag d. 14/6-24"
+    },
+    {
+      question:"Udmeldelse",
+      answer: "Kontingentet er bindende for hele sæsonen og tilbagebetales ikke, uanset årsag. Hvis du ikke ønsker at være medlem mere, bedes du skrive til klubbens kasserer via e-mail, Ibo@post.tele.dk"
     },
   ];

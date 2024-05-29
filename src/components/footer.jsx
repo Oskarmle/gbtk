@@ -13,10 +13,10 @@ export default function Footer() {
         </a>
         <div className="vertical_line_white"></div>
 
-        <a target="_blank" href="mailto:Gladsaxebordtennisklub@gmail.com" className="footer_section2 footer_section">
+        <a target="_blank" href="mailto:GladsaxeBTK@gmail.com" className="footer_section2 footer_section">
           <p>Spørgsmål?</p>
           <p>Skriv en mail til</p>
-          <p>Gladsaxebordtennisklub@gmail.com</p>
+          <p>GladsaxeBTK@gmail.com</p>
         </a>
         <div className="vertical_line_white"></div>
 

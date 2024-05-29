@@ -66,10 +66,6 @@
   cursor: pointer;
 }
 
-/* .secondary_info h4:hover{
-  font-size: 28px;
-} */
-
 .secondary_info h4 {
   padding-top: 5px;
   font-size: 25px;
@@ -97,6 +93,13 @@
 .path {
   display: flex;
   align-items: center;
+  cursor: pointer;
+}
+
+.path_current{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
 .path_container {
@@ -110,6 +113,14 @@
   color: var(--grey);
   font-size: 25px;
   text-decoration: underline;
+  padding-left: 10px;
+}
+
+.path_current p{
+  color: var(--green);
+  font-weight: 700;
+  font-size: 25px;
+  /* text-decoration: underline; */
   padding-left: 10px;
 }
 
@@ -143,7 +154,7 @@
 }
 
 /******************* Section 3 with accordion *******************/
-.dropout {
+.join {
   background: var(--green_gradient);
   display: flex;
   color: var(--white);
@@ -153,38 +164,31 @@
   justify-content: space-around;
 }
 
-.dropout2 {
+.join2 {
   margin-top: 120px;
 }
 
-.dropout_header {
+.join_header {
   font-size: 60px;
   margin-bottom: 40px;
 }
 
-.dropout1,
-.dropout2 {
+.join1,
+.join2 {
   width: 600px;
 }
 
-.dropout1 p,
-.dropout2 p {
-  margin-bottom: 40px;
-  font-size: 25px;
-}
-
-.dropout_mail {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.dropout_mail p{
+.join_button{
+  background: var(--grey);
   margin: 0;
 }
 
-.dropout_q{
-  text-decoration: underline;
-  font-weight: bold;
-  cursor: pointer;
+.join_button:hover{
+  background: var(--grey_hover);
+}
+
+.join1 p,
+.join2 p {
+  margin-bottom: 40px;
+  font-size: 25px;
 }
